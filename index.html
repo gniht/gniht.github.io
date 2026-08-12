@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[Your Name] — builder</title>
+<meta name="description" content="I design and build tools — lately, tools for working with AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FBFBF9;
+    --ink: #1C1E21;
+    --muted: #5D6268;
+    --rule: #E3E2DD;
+    --accent: #2B49C4;
+    --badge-bg: #F1F1EC;
+    --serif: "Source Serif 4", Georgia, serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.65;
+    border-top: 3px solid var(--accent);
+  }
+
+  main {
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 72px 24px 48px;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  a:hover { text-decoration-thickness: 2px; }
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* ---------- header ---------- */
+
+  header h1 {
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+
+  header .identity {
+    margin-top: 10px;
+    font-size: 19px;
+    color: var(--ink);
+  }
+
+  header .links {
+    margin-top: 14px;
+    font-family: var(--mono);
+    font-size: 13px;
+  }
+
+  /* ---------- section labels ---------- */
+
+  .section-label {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 56px 0 16px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+  }
+
+  section p + p { margin-top: 14px; }
+
+  /* ---------- project spec-sheet cards ---------- */
+
+  .project {
+    margin-top: 28px;
+  }
+
+  .project-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 10px 14px;
+    margin-bottom: 14px;
+  }
+
+  .project-name {
+    font-family: var(--mono);
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .badge {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    background: var(--badge-bg);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 2px 8px;
+    white-space: nowrap;
+  }
+  .badge.active {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: transparent;
+  }
+
+  .field {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 4px 20px;
+    margin-top: 10px;
+  }
+
+  .field dt {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    text-align: right;
+    padding-top: 4px;
+  }
+
+  .field dd { font-size: 16.5px; }
+
+  .repo-link {
+    font-family: var(--mono);
+    font-size: 13px;
+    display: inline-block;
+    margin-top: 12px;
+    margin-left: 116px;
+  }
+
+  .chain {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    margin: 26px 0 0 116px;
+  }
+
+  @media (max-width: 560px) {
+    .field { grid-template-columns: 1fr; gap: 2px; }
+    .field dt { text-align: left; padding-top: 8px; }
+    .repo-link, .chain { margin-left: 0; }
+    header h1 { font-size: 30px; }
+    main { padding-top: 56px; }
+  }
+
+  /* ---------- footer ---------- */
+
+  footer {
+    margin-top: 72px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <h1>[Your Name]</h1>
+    <p class="identity">I design and build tools — lately, tools for working with AI.</p>
+    <p class="links"><a href="https://github.com/gniht">github.com/gniht</a> · <a href="mailto:[your-email]">[your-email]</a></p>
+  </header>
+
+  <section aria-label="About">
+    <h2 class="section-label">About</h2>
+    <p>Most of what I make starts with a problem — one I've run into myself, or one someone tells me about. I recently completed a B.S. with a minor in physics and upper-level mathematics coursework, and before that I spent years in custom fabrication, building shipping crates for stained-glass windows and fixtures: work where the spec is exact and errors aren't recoverable.</p>
+    <p>These days I build AI tooling — processes and skills that make working with AI more reliable and more inspectable, by moving as much of the work as possible into things that can actually be verified.</p>
+  </section>
+
+  <section aria-label="Projects">
+    <h2 class="section-label">Projects</h2>
+    <p>The three projects below are one line of reasoning: each exists because of what the previous one surfaced.</p>
+
+    <article class="project">
+      <div class="project-head">
+        <span class="project-name">latent-world-engine</span>
+        <span class="badge">in development</span>
+      </div>
+      <dl class="field">
+        <dt>problem</dt>
+        <dd>AI can generate game content, but generated content is hard to trust — and a game is too complex to verify as a whole.</dd>
+        <dt>approach</dt>
+        <dd>Decompose games into atomic components simple enough that correctness of form can be checked, then build upward from verified pieces, keeping AI generation inside structures the framework can validate.</dd>
+        <dt>status</dt>
+        <dd>In active development; not yet public. Its core heuristics seeded both tools below.</dd>
+      </dl>
+    </article>
+
+    <p class="chain">└─ which led to</p>
+
+    <article class="project">
+      <div class="project-head">
+        <span class="project-name">project-spec-interrogator</span>
+        <span class="badge active">in use</span>
+      </div>
+      <dl class="field">
+        <dt>problem</dt>
+        <dd>AI output can't fit a need that was never articulated — and users often haven't fully worked out their own needs, even to themselves.</dd>
+        <dt>approach</dt>
+        <dd>A Claude Code skill that runs a structured interrogation dialog: it pushes back on vague language, treats contradictions as leads rather than errors, and continues until the spec is concrete enough to build against.</dd>
+        <dt>status</dt>
+        <dd>In use. It produced the architectural spec for process-exhumer-tool, and specialized derivatives of it are built into both of the other projects here.</dd>
+      </dl>
+      <a class="repo-link" href="https://github.com/gniht/project-spec-interrogator">read the full write-up →</a>
+    </article>
+
+    <p class="chain">└─ which led to</p>
+
+    <article class="project">
+      <div class="project-head">
+        <span class="project-name">process-exhumer-tool</span>
+        <span class="badge">built — first run pending</span>
+      </div>
+      <dl class="field">
+        <dt>problem</dt>
+        <dd>Models are biased toward jumping to an answer, so even a clearly specified process isn't reliably followed — and that can't be prompted away.</dd>
+        <dt>approach</dt>
+        <dd>Change the goal: instead of asking AI to do the thing, have it build code that does the thing. A five-stage pipeline refines a task into a contract, recursively decomposes it, generates and verifies code for each piece, and assembles a standalone program — with any remaining AI judgment confined to a single, countable seam.</dd>
+        <dt>status</dt>
+        <dd>All five stages built. The first end-to-end run is the current milestone.</dd>
+      </dl>
+      <a class="repo-link" href="https://github.com/gniht/process-exhumer-tool">read the full write-up →</a>
+    </article>
+  </section>
+
+  <section aria-label="Contact">
+    <h2 class="section-label">Contact</h2>
+    <p>The best way to reach me is email: <a href="mailto:[your-email]">[your-email]</a>. My repositories are at <a href="https://github.com/gniht">github.com/gniht</a>.</p>
+  </section>
+
+  <footer>
+    <p>Plain HTML and CSS. No framework, no build step.</p>
+  </footer>
+
+</main>
+</body>
+</html>
